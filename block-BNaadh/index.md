@@ -5,7 +5,7 @@ Q. write express generator command with varying options to generate express app 
 - using ejs as template engine
 
 ```js
-express --view=ejs
+express --view=ejs sample
 ```
 
 - no views for express application
