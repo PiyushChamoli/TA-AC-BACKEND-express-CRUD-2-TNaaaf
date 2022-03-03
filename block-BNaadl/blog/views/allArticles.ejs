@@ -8,9 +8,10 @@
 </head>
 <body>
     <main>
+        <a href="/articles/new">Add Article</a>
         <h2>All Articles</h2>
         <% articles.forEach(article => { %>
-            <a href="/articles/<%= article.id >"><%= article.title %></a>
+            <a href="/articles/<%= article.id %>"><%= article.title %></a>
         <% }) %>
     </main>
 </body>
