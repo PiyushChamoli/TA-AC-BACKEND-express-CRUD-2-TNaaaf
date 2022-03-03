@@ -8,12 +8,19 @@
 </head>
 <body>
     <main>
+        <a href="/articles">All Articles</a>
+        <a href="/articles/new">Add Article</a>
         <h2>Article Details</h2>
         <h3><%= article.title %></h3>
         <p><%= article.description %></p>
-        <p><%= article.tags %></p>
-        <p><%= article.author %></p>
-        <p><%= article.likes %></p>
+        <% article.tags.forEach(tag => { %>
+            <span><%= tag %></span>
+        <% }) %>
+        <p><%= article.likes ? article.likes : 0 %></p>
+        <a href="/articles/<%= article.id %>/likes">Like</a>
+        <a href="/articles/<%= article.id %>/dislikes">Dislike</a>
+        <a href="/articles/<%= article.id %>/edit">Edit</a>
+        <a href="/articles/<%= article.id %>/delete">Delete</a>
     </main>
 </body>
 </html>
